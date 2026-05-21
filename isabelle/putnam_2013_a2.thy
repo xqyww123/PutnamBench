@@ -1,4 +1,5 @@
-theory putnam_2013_a2 imports Complex_Main
+theory putnam_2013_a2
+  imports Complex_Main
 begin
 
 theorem putnam_2013_a2:
@@ -12,6 +13,7 @@ theorem putnam_2013_a2:
   and "T \<equiv> (\<lambda>n::nat. {m::int. (\<exists>a::int list. P n a \<and> last a = m)})"
   assumes hf: "\<forall>n::nat\<in>S. f n = (LEAST r::int. r \<in> T n)"
   shows "inj_on f S"
+  thm assms
   sorry
 
 end

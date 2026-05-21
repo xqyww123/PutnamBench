@@ -1,4 +1,4 @@
-theory Scratch imports Complex_Main
+theory putnam_2023_a6 imports Complex_Main
 "HOL-Number_Theory.Cong"
 begin
 
