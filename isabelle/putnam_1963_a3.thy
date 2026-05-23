@@ -5,7 +5,7 @@ begin
 
 definition putnam_1963_a3_solution :: "(real \<Rightarrow> real) \<Rightarrow> nat \<Rightarrow> real \<Rightarrow> real \<Rightarrow> real" where
 "putnam_1963_a3_solution \<equiv> undefined"
-(*  \<lambda> (f :: real \<Rightarrow> real) (n :: nat) (x :: real) (t :: real). (x-t)^(n-1) * (f t) / (fact (n-1)) * t^n *)
+(*  \<lambda> (f :: real \<Rightarrow> real) (n :: nat) (x :: real) (t :: real). (x-t)^(n-1) * (f t) / (fact (n-1) * t^n) *)
 theorem putnam_1963_a3:
   fixes P :: "nat \<Rightarrow> (real \<Rightarrow> real) \<Rightarrow> (real \<Rightarrow> real)"
     and n :: "nat"

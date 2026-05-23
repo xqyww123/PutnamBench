@@ -17,7 +17,7 @@ theorem putnam_1963_a6:
     and hdistinct : "closed_segment A B \<noteq> closed_segment U V \<and> closed_segment C D \<noteq> closed_segment U V \<and> closed_segment A B \<noteq> closed_segment C D"
     and hM : "M \<in> closed_segment A B \<and> M \<in> closed_segment C D"
     and hP : "collinear {P, A, C} \<and> collinear {P, U, V}"
-    and hQ : "collinear {P, B, D} \<and> collinear {Q, U, V}"
+    and hQ : "collinear {Q, B, D} \<and> collinear {Q, U, V}"
   shows "M = midpoint P Q"
   sorry
 

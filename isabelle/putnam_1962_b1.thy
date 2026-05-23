@@ -6,7 +6,7 @@ theorem putnam_1962_b1:
     and x y :: real
     and n :: nat
   assumes h0 : "p 0 = (\<lambda> x :: real. 1)"
-    and hp : "\<forall> n > 0. p n = (\<lambda> x :: real. \<Prod> i \<in> {0..n-1}. (x - i))"
+    and hp : "\<forall> n > 0. p n = (\<lambda> x :: real. \<Prod> i \<in> {0..<n}. (x - real i))"
   shows "p n (x + y) = (\<Sum> k \<in> {0..n}. (n choose k) * (p k x) * (p (n - k) y))"
   sorry
 
