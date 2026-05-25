@@ -1,5 +1,6 @@
 theory putnam_1970_b2 imports Complex_Main
 "HOL-Analysis.Derivative"
+"HOL-Analysis.Interval_Integral"
 "HOL-Computational_Algebra.Polynomial"
 begin
 

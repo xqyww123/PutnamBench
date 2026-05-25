@@ -1,4 +1,5 @@
 theory putnam_2006_a5 imports Complex_Main
+"HOL-Number_Theory.Cong"
 begin
 
 (* uses (nat \<Rightarrow> real) instead of ({1..n} \<Rightarrow> real) *)

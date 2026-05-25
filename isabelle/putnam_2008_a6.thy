@@ -4,7 +4,7 @@ Complex_Main
 begin
 
 theorem putnam_2008_a6:
-  shows "\<exists> c :: real. c > 0 \<and> (\<forall> G :: 'a monoid. group G \<longrightarrow> finite (carrier G) \<longrightarrow> card (carrier G) > 1 \<longrightarrow> (\<exists> s :: 'a list. length s \<le> c * ln (card (carrier G)) \<and> (\<forall> g \<in> carrier G. \<exists> t \<in> set (subseqs s). foldr (\<otimes>\<^bsub>G\<^esub>) t (\<one>\<^bsub>G\<^esub>) = g)))"
+  shows "\<exists> c :: real. c > 0 \<and> (\<forall> G :: 'a monoid. group G \<longrightarrow> finite (carrier G) \<longrightarrow> card (carrier G) > 1 \<longrightarrow> (\<exists> s :: 'a list. real (length s) \<le> c * ln (real (card (carrier G))) \<and> (\<forall> g \<in> carrier G. \<exists> t \<in> set (subseqs s). foldr (\<otimes>\<^bsub>G\<^esub>) t (\<one>\<^bsub>G\<^esub>) = g)))"
   sorry
 
 end

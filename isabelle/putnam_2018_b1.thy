@@ -1,5 +1,5 @@
 theory putnam_2018_b1 imports Complex_Main
-"HOL-Analysis.Finite_Cartesian_Product"
+"HOL-Analysis.Cartesian_Space"
 "HOL-Library.Disjoint_Sets"
 begin
 

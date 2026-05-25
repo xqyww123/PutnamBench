@@ -1,4 +1,4 @@
-theory putnam_1976_a3 imports Complex_Main
+theory putnam_1976_a3 imports "HOL-Computational_Algebra.Computational_Algebra"
 begin
 
 definition putnam_1976_a3_solution :: "(nat \<times> nat \<times> nat \<times> nat) set" where

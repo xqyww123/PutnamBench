@@ -1,8 +1,11 @@
 theory putnam_1989_b2 imports
 Complex_Main
+"HOL-Analysis.Inner_Product"
 "HOL-Algebra.Complete_Lattice"
 "HOL-Library.FuncSet"
 begin
+
+no_notation inner (infix "\<bullet>" 70)
 
 record 'a semigroup =  "'a partial_object" +
   mult    :: "['a, 'a] \<Rightarrow> 'a" (infixl "\<bullet>\<index>" 70)

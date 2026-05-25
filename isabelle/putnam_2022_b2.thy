@@ -1,4 +1,5 @@
 theory putnam_2022_b2 imports Complex_Main
+"HOL-Analysis.Cross3"
 begin
 
 definition putnam_2022_b2_solution :: "nat set" where "putnam_2022_b2_solution \<equiv> undefined"
