@@ -14,7 +14,7 @@ theorem putnam_2019_b3:
   and hQ0: "\<forall> i j :: 'n. i \<noteq> j \<longrightarrow> scalar_product (Q$i) (Q$j) = 0 \<and> scalar_product ((transpose Q)$i) ((transpose Q)$j) = 0" 
   and hQ1: "\<forall> i :: 'n. scalar_product (Q$i) (Q$i) = 1 \<and> scalar_product ((transpose Q)$i) ((transpose Q)$i) = 1"
   and hu: "(transpose u) ** u = 1"
-  shows "det (Q - mat 1) \<noteq> 0 \<longrightarrow> det (P ** Q - mat 1) \<noteq> 0"
+  shows "det (Q - mat 1) \<noteq> 0 \<longrightarrow> det (P ** Q - mat 1) = 0"
   sorry
 
 end

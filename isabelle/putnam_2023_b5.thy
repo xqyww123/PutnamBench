@@ -3,8 +3,9 @@ theory putnam_2023_b5 imports Complex_Main
 "HOL-Combinatorics.Permutations"
 begin
 
+
 definition putnam_2023_b5_solution :: "int set" where "putnam_2023_b5_solution \<equiv> undefined"
-(* {n::int. n = 1 \<or> [n = 2] (mod 4)} *)
+(* {n::int. n > 0 \<and> (n = 1 \<or> [n = 2] (mod 4))} *)
 theorem putnam_2023_b5:
   fixes n :: int
   and perm :: bool

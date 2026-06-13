@@ -2,6 +2,7 @@ theory putnam_2004_a5 imports Complex_Main
 begin
 
 (* uses (nat \<times> nat) instead of (Fin m \<times> Fin n) *)
+
 theorem putnam_2004_a5:
   fixes m n :: nat
   and adj :: "(nat \<times> nat) \<Rightarrow> (nat \<times> nat) \<Rightarrow> bool"
@@ -12,7 +13,7 @@ theorem putnam_2004_a5:
   and "connected \<equiv> (\<lambda>(C::(nat\<times>nat)\<Rightarrow>bool)(P::nat\<times>nat)(Q::nat\<times>nat). (\<exists>(S::(nat\<times>nat) list). length S > 0 \<and>
   S!0 = P \<and> last S = Q \<and> (\<exists>p::bool. \<forall>i::nat\<in>{0..((length S)-1)}. C (S!i) = p) \<and> (\<forall>i::nat\<in>{0..((length S)-2)}. adj (S!i) (S!(i+1)))))"
   and "cmr \<equiv> (\<lambda>C::(nat\<times>nat)\<Rightarrow>bool. card {R::(nat\<times>nat) set. (\<exists>P\<in>R. fst P < m \<and> snd P < n \<and> (\<forall>Q::nat\<times>nat. (Q \<in> R \<longleftrightarrow> connected C P Q)))})"
-  shows "real (\<Sum>C\<in>{C'::(nat\<times>nat)\<Rightarrow>bool. (\<forall>i::nat\<ge>m. \<forall>j::nat\<ge>n. C (i,j) = False)}. cmr C) > real (2 ^ (m*n)) * (real (m*n) / 8)"
+  shows "real (\<Sum>C\<in>{C::(nat\<times>nat)\<Rightarrow>bool. (\<forall>i::nat. \<forall>j::nat. (i \<ge> m \<or> j \<ge> n) \<longrightarrow> C (i,j) = False)}. cmr C) > real (2 ^ (m*n)) * (real (m*n) / 8)"
   sorry
 
 end

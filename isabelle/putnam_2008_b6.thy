@@ -4,7 +4,9 @@ theory putnam_2008_b6 imports Complex_Main
 begin
 
 (* uses (nat \<Rightarrow> nat) instead of (Fin n \<Rightarrow> Fin n) *)
-definition klimited :: "nat \<Rightarrow> nat \<Rightarrow> (nat \<Rightarrow> nat) \<Rightarrow> bool" where "klimited \<equiv> (\<lambda>(k::nat)(n::nat)(s::nat\<Rightarrow>nat). s permutes {0..(n-1)} \<and> (\<forall>i::nat\<in>{0..(n-1)}. \<bar>s i - i\<bar> \<le> k))"
+
+definition klimited :: "nat \<Rightarrow> nat \<Rightarrow> (nat \<Rightarrow> nat) \<Rightarrow> bool" where "klimited \<equiv> (\<lambda>(k::nat)(n::nat)(s::nat\<Rightarrow>nat). s permutes {0..(n-1)} \<and> (\<forall>i::nat\<in>{0..(n-1)}. \<bar>int (s i) - int i\<bar> \<le> int k))"
+
 theorem putnam_2008_b6:
   fixes n k :: nat
   assumes hnk: "n > 0 \<and> k > 0"

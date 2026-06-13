@@ -2,6 +2,7 @@ theory putnam_2006_b3 imports Complex_Main
 "HOL-Analysis.Finite_Cartesian_Product"
 begin
 
+
 definition putnam_2006_b3_solution :: "nat \<Rightarrow> nat" where "putnam_2006_b3_solution \<equiv> undefined"
 (* (\<lambda>n::nat. n choose 2 + 1) *)
 theorem putnam_2006_b3:
@@ -16,7 +17,7 @@ theorem putnam_2006_b3:
           (\<forall> p \<in> B. p$2 < m*p$1 + b))))"
     and hL : "\<forall> S. L S = card {AB. IsLinearPartition S AB}"
     and npos : "n > 0"
-  shows "(GREATEST LSS::nat. (\<exists>S::(real^2) set. card S = n \<and> LS S = LSS)) = putnam_2006_b3_solution n"
+  shows "(GREATEST LSS::nat. (\<exists>S::(real^2) set. card S = n \<and> L S = LSS)) = putnam_2006_b3_solution n"
   sorry
   
 end

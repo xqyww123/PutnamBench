@@ -2,12 +2,13 @@ theory putnam_1977_b6 imports Complex_Main
 "HOL-Algebra.Group"
 begin
 
+
 theorem putnam_1977_b6:
   fixes G (structure)
     and h :: "nat"
     and a :: "'a"
     and P H :: "'a set"
-  defines "P \<equiv> {g :: 'a. \<exists> x :: 'a list. (length x \<ge> 1 \<and> (\<forall> i \<in> {1..length x}. x!i \<in> H) \<and> g = foldr (\<lambda> y z. y \<otimes>\<^bsub>G\<^esub> (z \<otimes>\<^bsub>G\<^esub> a)) x \<one>\<^bsub>G\<^esub>)}"
+  defines "P \<equiv> {g :: 'a. \<exists> x :: 'a list. (length x \<ge> 1 \<and> (\<forall> i \<in> {0..<length x}. x!i \<in> H) \<and> g = foldr (\<lambda> y z. (y \<otimes>\<^bsub>G\<^esub> a) \<otimes>\<^bsub>G\<^esub> z) x \<one>\<^bsub>G\<^esub>)}"
   assumes hG : "Group.group G"
     and ha : "a \<in> carrier G"
     and hH : "finite H \<and> subgroup H G"

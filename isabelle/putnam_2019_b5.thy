@@ -10,7 +10,7 @@ theorem putnam_2019_b5:
     and f12 : "f 1 = 1 \<and> f 2 = 1"
     and pdeg : "degree p = 1008"
     and hp : "\<forall>n\<le>1008. poly p (2 * n + 1) = f (2 * n + 1)"
-  shows "\<forall>j k::nat. (poly p 2019 = f j - f k) \<longleftrightarrow> ((j, k) = putnam_2019_b5_solution)"
+  shows "poly p 2019 = f (fst putnam_2019_b5_solution) - f (snd putnam_2019_b5_solution)"
   sorry
 
 end
