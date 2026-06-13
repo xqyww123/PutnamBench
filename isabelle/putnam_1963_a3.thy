@@ -15,7 +15,7 @@ theorem putnam_1963_a3:
     and hf : "continuous_on {1..} f"
     and hy : "\<forall> k :: nat < n. ((deriv^^k) y) C1_differentiable_on {1..}"
   shows "((\<forall> k :: nat < n. ((deriv^^k) y) 1 = 0) \<and>
-        (\<forall> x :: real. x \<ge> 0 \<longrightarrow> (P n y) x = f x)) \<longleftrightarrow>
+        (\<forall> x :: real. x \<ge> 1 \<longrightarrow> (P n y) x = f x)) \<longleftrightarrow>
         (\<forall> x :: real \<ge> 1. y x = interval_lebesgue_integral lebesgue 1 (ereal x) (putnam_1963_a3_solution f n x))"
   sorry
 

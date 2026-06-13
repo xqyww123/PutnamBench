@@ -1,10 +1,10 @@
-theory putnam_1998_a4 imports Complex_Main "HOL-Number_Theory.Cong" 
+theory putnam_1998_a4 imports Complex_Main "HOL-Number_Theory.Cong"
 begin
 
-definition putnam_1998_a4_solution::"nat set" where "putnam_1998_a4_solution \<equiv> undefined"
-(* {n::nat. [n = 1] (mod 6)} *)
 fun from_digits::"nat list \<Rightarrow> nat" where
   "from_digits L = foldr (\<lambda>a. \<lambda>b. a + 10 * b) L 0"
+definition putnam_1998_a4_solution::"nat set" where "putnam_1998_a4_solution \<equiv> undefined"
+(* {n::nat. [n = 1] (mod 6)} *)
 theorem putnam_1998_a4:
   fixes A::"nat\<Rightarrow>nat list"
   assumes hA1 : "A 1 = [0]"
