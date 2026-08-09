@@ -13,3 +13,7 @@ isabelle_archive/
 lean4_archive/
 
 split_into_files.py
+# Isabelle proof stores (regenerable)
+*.proof-store
+*.proof-store.lock
+*.proof-store.tmp*
